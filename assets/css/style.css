@@ -120,10 +120,11 @@ nav ul li a {
         background-color: #0000ff;
         z-index: -2;
         transform: translateX(100%);
+        opacity: 0;
         transition: all 1s;
     }
     nav ul.slide {
-        opacity: 0;
+        opacity: 1;
         transform: translateX(0);
     }
 }
