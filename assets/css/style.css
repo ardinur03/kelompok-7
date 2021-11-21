@@ -123,6 +123,7 @@ nav ul li a {
         transition: all 1s;
     }
     nav ul.slide {
+        opacity: 1;
         transform: translateX(0);
     }
 }
