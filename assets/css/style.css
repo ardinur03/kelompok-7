@@ -1,11 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 * {
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
 
 body {
     overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -13,28 +16,72 @@ body {
 
 nav {
     display: flex;
-    background-color: blue;
+    background-color: transparent;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 20px 80px;
     height: 30px;
     align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    transition: 0.5s;
+    z-index: 20;
+}
+
+.logo {
+    margin-top: 35px;
+}
+
+.nav-bg-primary {
+    background-color: #00bcd4;
+    color: #fff;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    width: 300px;
+    width: 280px;
     justify-content: space-between;
 }
 
 nav ul li a {
-    color: white;
+    color: black;
     font-size: 0.8em;
     text-decoration: none;
+    font-size: 16px;
+}
+
+.text-box {
+    align-self: center;
+    text-align: center;
+    margin: auto;
+}
+
+.text-box h1 {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #000;
+}
+
+.text-box a {
+    color: white;
+}
+
+#header {
+    background-image: url("../images/hero-image.jpg");
+    min-height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
 }
 
 .menu-toggle {
@@ -89,6 +136,56 @@ nav ul li a {
     transform: rotate(-45deg) translate(-1px, 0);
 }
 
+#about-section {
+    height: 100vh;
+}
+
+#tentang-fauna {
+    margin-bottom: 30px;
+}
+
+.about-section {
+    margin-top: 90px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 180px 2px 180px 2px;
+    height: 550px;
+    padding: 20px;
+    box-shadow: 2px 10px 15px 9px #d4d4d4;
+    height: 1950px;
+}
+
+.content-about {
+    margin: 50px -100px;
+}
+
+.about-image img {
+    border-radius: 15px;
+    height: 250px;
+    width: auto;
+}
+
+.col-md img {
+    border-radius: 15px;
+    height: 250px;
+    width: auto;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin: 0px 100px;
+}
+
+.content-hero {
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    justify-content: center;
+}
+
 
 /* Responsive Breakpoint */
 
@@ -97,7 +194,7 @@ nav ul li a {
 
 @media screen and (max-width: 768px) {
     nav ul {
-        width: 60%;
+        width: 70%;
     }
 }
 
@@ -105,8 +202,16 @@ nav ul li a {
 /* Phone */
 
 @media screen and (max-width: 576px) {
+    .logo {
+        margin-top: 25px;
+        margin-left: -50px;
+    }
     .menu-toggle {
         display: flex;
+    }
+    nav {
+        background-color: blue;
+        transition: 0.8s;
     }
     nav ul {
         position: absolute;
@@ -127,4 +232,99 @@ nav ul li a {
         opacity: 1;
         transform: translateX(0);
     }
+    nav.bg-shadow-black {
+        background-color: black;
+        width: 100%;
+        opacity: 0.4;
+        transition: 0.5s;
+    }
+}
+
+
+/* CSS Reusesable */
+
+.btn {
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    border: 1px solid #c6cbd0;
+    cursor: pointer;
+}
+
+.bg-transparent {
+    background-color: transparent;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.bg-transparent:hover {
+    background-color: rgba(226, 226, 226, 0.789);
+    color: #fff;
+}
+
+.border-radius-50 {
+    border-radius: 30px;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: #000;
+}
+
+.container-fluid {
+    margin: 0px 20px;
+}
+
+.title-section {
+    margin-top: 55px;
+    font-size: 32px;
+}
+
+.align-item-center {
+    text-align: left;
+    margin-top: 90px;
+}
+
+.card {
+    display: flex;
+    background-color: rgba(189, 187, 187, 0.597);
+    border-radius: 20px;
+    border: #dfdfdf solid;
+    padding: 20px;
+    box-shadow: 2px 7px 15px 1px #d4d4d4;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.row {
+    margin: 0 100px;
+}
+
+.col {
+    float: left;
+    width: 60%;
+    padding: 0 10px;
+}
+
+.col-md {
+    float: left;
+    width: 40%;
+    padding: 0 10px;
+}
+
+.mt-2 {
+    margin-top: 2rem !important;
+}
+
+.text-center {
+    text-align: center;
 }
