@@ -29,8 +29,14 @@ nav {
     z-index: 20;
 }
 
-.logo {
-    margin-top: -5px;
+.logo img {
+    margin-top: 40px;
+}
+
+.logo-small {
+    transition: 0.7s;
+    width: 20%;
+    margin-top: -1px !important;
 }
 
 .nav-bg-primary {
@@ -42,7 +48,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    width: 280px;
+    width: 310px;
     justify-content: space-between;
 }
 
@@ -68,6 +74,28 @@ nav ul {
 
 .nav-link a.active::after {
     width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 70px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 2px 13px 19px 4px rgba(0, 0, 0, 0.16);
+    margin: 0px 20px;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    transition: 0.9s;
+    color: #000;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+    position: absolute;
 }
 
 nav ul li a {
@@ -169,11 +197,22 @@ nav ul li a {
     margin-top: 90px;
     background-color: #fff;
     border: 1px solid #e6e6e6;
-    border-radius: 180px 2px 180px 2px;
     height: 550px;
     padding: 20px;
     box-shadow: 2px 10px 15px 9px #d4d4d4;
-    height: 2400px;
+    height: auto;
+}
+
+.karnivora {
+    border-radius: 180px 2px 180px 2px;
+}
+
+.herbivora {
+    border-radius: 2px 180px 2px 180px;
+}
+
+.omnivora {
+    border-radius: 180px 2px 180px 2px;
 }
 
 .content-about {
@@ -225,10 +264,7 @@ nav ul li a {
 
 @media screen and (max-width: 768px) {
     nav ul {
-        width: 70%;
-    }
-    .animals-group-section {
-        height: 3050px;
+        width: 550px;
     }
     .row {
         flex-direction: column;
@@ -256,7 +292,7 @@ nav ul li a {
 
 @media screen and (max-width: 576px) {
     .logo {
-        margin-top: 25px;
+        margin-top: -50px;
         margin-left: -50px;
     }
     .menu-toggle {
@@ -270,7 +306,7 @@ nav ul li a {
         position: absolute;
         right: 0;
         top: 0;
-        width: 80%;
+        width: 400px;
         height: 100vh;
         align-items: center;
         justify-content: space-evenly;
@@ -345,8 +381,10 @@ nav ul li a {
 }
 
 .bg-transparent:hover {
-    background-color: rgba(226, 226, 226, 0.789);
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.789);
+    color: #000;
+    font-weight: bold;
+    transition: 0.4s;
 }
 
 .border-radius-50 {
