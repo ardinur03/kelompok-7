@@ -30,6 +30,7 @@ nav {
 }
 
 .logo img {
+    transition: 0.7s;
     margin-top: 40px;
 }
 
@@ -208,11 +209,11 @@ nav ul li a {
 }
 
 .herbivora {
-    border-radius: 2px 180px 2px 180px;
+    border-radius: 180px 12px 180px 2px;
 }
 
 .omnivora {
-    border-radius: 180px 2px 180px 2px;
+    border-radius: 180px 12px 180px 2px;
 }
 
 .content-about {
@@ -220,9 +221,22 @@ nav ul li a {
 }
 
 .about-image img {
+    position: relative;
     border-radius: 15px;
     height: 250px;
     width: auto;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.about-image img:hover {
+    transition: 0.7s;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    -webkit-box-shadow: 5px 24px 38px 6px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 5px 24px 38px 6px rgba(0, 0, 0, 0.31);
+    box-shadow: 5px 24px 38px 6px rgba(0, 0, 0, 0.31);
 }
 
 .col-md .about-image img {
@@ -256,6 +270,34 @@ nav ul li a {
     height: 100vh;
 }
 
+.contact-col {
+    /* flex-basis: 32%; */
+    width: auto;
+    background: #00d688;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    margin: 15px;
+    /*tambahkan statement ini setelah buat class course-col:cover */
+}
+
+
+/* buat shadow pada box penjelasan */
+
+.contact-col:hover {
+    box-shadow: 0 0 20px 0px #a7a7a7;
+}
+
+#footer {
+    height: 50px;
+    line-height: 50px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
 
 /* Responsive Breakpoint */
 
@@ -268,6 +310,9 @@ nav ul li a {
     }
     .row {
         flex-direction: column;
+    }
+    .row-contact {
+        margin: 0px auto;
     }
     .col-md {
         float: left !important;
@@ -285,6 +330,11 @@ nav ul li a {
     .one {
         order: 4 !important;
     }
+    #kontak {
+        padding-top: 40px;
+        height: auto;
+        width: auto;
+    }
 }
 
 
@@ -292,14 +342,21 @@ nav ul li a {
 
 @media screen and (max-width: 576px) {
     .logo {
-        margin-top: -50px;
+        margin-top: -30px;
         margin-left: -50px;
+    }
+    .logo-small {
+        margin-top: 25px !important;
+        width: 30%;
     }
     .menu-toggle {
         display: flex;
     }
+    .menu-toggle span {
+        background-color: rgb(155, 155, 155);
+    }
     nav {
-        background-color: blue;
+        background-color: transparent;
         transition: 0.8s;
     }
     nav ul {
@@ -311,7 +368,7 @@ nav ul li a {
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
-        background-color: #0000ff;
+        background-color: #fff;
         z-index: -2;
         transform: translateX(100%);
         opacity: 0;
@@ -356,6 +413,10 @@ nav ul li a {
     }
     .title-section {
         font-size: 28px !important;
+    }
+    #kontak {
+        padding-top: 40px;
+        height: auto;
     }
 }
 
