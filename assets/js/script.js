@@ -57,11 +57,55 @@ window.addEventListener("scroll", (e) => {
 });
 
 new Typed("#text-hero", {
-    strings: [
-        "Selamat Datang di Website Dunia Fauna",
-        "Kami menyediakan berbagai macam Kelompok Fauna",
-    ],
+    strings: ["Selamat Datang di Website Dunia <b>Fauna</b>"],
     typeSpeed: 150,
     delaySpeed: 900,
-    loop: true,
+    loop: false,
+    /**
+     * All typing is complete
+     * @param {Typed} self
+     */
+    onComplete: (self) => {
+        self.showCursor = false;
+    },
 });
+new Typed("#text-description", {
+    strings: [
+        "Apa itu <b>Fauna ?</b>",
+        "Fauna, dari bahasa Latin, atau alam hewan artinya adalah <b>khazanah</b> segala macam jenis hewan yang hidup di bagian tertentu atau periode tertentu. ",
+    ],
+    typeSpeed: 150,
+    startDelay: 4000,
+    delaySpeed: 2000,
+    loop: false,
+    /**
+     * All typing is complete
+     * @param {Typed} self
+     */
+    onComplete: (self) => {
+        self.reset();
+    },
+});
+
+(function() {
+    var options = {
+        whatsapp: "0895328885809", // WhatsApp number
+        email: "muhamad.ardi.tif21@polban.ac.id", // Email
+        call_to_action: "Kirimi kami pesan", // Call to action
+        button_color: "#A8CE50", // Color of button
+        position: "right", // Position may be 'right' or 'left'
+        order: "email,whatsapp", // Order of buttons
+    };
+    var proto = document.location.protocol,
+        host = "getbutton.io",
+        url = proto + "//static." + host;
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = url + "/widget-send-button/js/init.js";
+    s.onload = function() {
+        WhWidgetSendButton.init(host, proto, options);
+    };
+    var x = document.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s, x);
+})();
