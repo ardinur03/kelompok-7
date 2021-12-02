@@ -61,13 +61,6 @@ new Typed("#text-hero", {
     typeSpeed: 150,
     delaySpeed: 900,
     loop: false,
-    /**
-     * All typing is complete
-     * @param {Typed} self
-     */
-    onComplete: (self) => {
-        self.showCursor = false;
-    },
 });
 new Typed("#text-description", {
     strings: [
@@ -78,13 +71,6 @@ new Typed("#text-description", {
     startDelay: 4000,
     delaySpeed: 2000,
     loop: false,
-    /**
-     * All typing is complete
-     * @param {Typed} self
-     */
-    onComplete: (self) => {
-        self.reset();
-    },
 });
 
 (function() {
