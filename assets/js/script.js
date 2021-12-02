@@ -75,7 +75,7 @@ new Typed("#text-description", {
 
 (function() {
     var options = {
-        whatsapp: "0895328885809", // WhatsApp number
+        whatsapp: "+62895328885809", // WhatsApp number
         email: "muhamad.ardi.tif21@polban.ac.id", // Email
         call_to_action: "Kirimi kami pesan", // Call to action
         button_color: "#A8CE50", // Color of button
