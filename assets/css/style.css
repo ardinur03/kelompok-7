@@ -224,23 +224,6 @@ nav ul li a {
     position: relative;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    transition: .5s ease;
-    background-color: transparent;
-}
-
-.about-image:hover .overlay {
-    opacity: 1;
-}
-
 .text {
     color: white;
     font-size: 20px;
@@ -323,12 +306,57 @@ nav ul li a {
     box-shadow: 0 0 20px 0px #a7a7a7;
 }
 
-#footer {
-    height: 50px;
+
+/* footer {
+    height: 80px;
     line-height: 50px;
     background: #333;
     color: #fff;
     text-align: center;
+} */
+
+
+/* .footer {
+    padding-top: 20px;
+} */
+
+.footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer p {
+    color: #fff;
+}
+
+#footer .text-red-ard {
+    color: rgb(255, 0, 0);
+}
+
+.footer__title {
+    font-size: 2rem;
+    margin-bottom: var(--mb-4);
+}
+
+.footer__social {
+    margin-bottom: 20px;
+}
+
+.footer__icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 var(--mb-2)
+}
+
+.footer__icon:hover {
+    transition: 1s;
+    font-size: 2rem;
+    color: #5353ff;
+}
+
+#footer a {
+    text-decoration: none;
 }
 
 

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!--===== Typed CDN =====-->
-    <script src="assets/js/typed.js"></script>
+    <script src="assets/vendor/js-typed/typed.js"></script>
 </head>
 
 <body>
@@ -85,9 +85,6 @@
                         <div class="col-md text-center two mt-1">
                             <div class="about-image">
                                 <img src="assets/images/karnivora/air/ikan-hiu.jpg" alt="Ikan Hiu" />
-                                <div class="overlay">
-                                    <div class="text">Hello World</div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -493,12 +490,31 @@
         </div>
     </section>
 
-    <section class="footer">
-        <div id="footer">
-            Copyright &copy; 2021 Designed by Kelompok 7
+    <!-- <footer>
+        <div class="footer">
+            <p> Copyright &copy; <br> 2021 Designed by Kelompok 7</p>
         </div>
+    </footer> -->
+
+    <footer id="footer" class="footer">
+        <div class="footer__social">
+            <a href="#" class="footer__icon"><i class="bx bxl-facebook"></i></a>
+            <a href="https://instagram.com/ardinur_03" target="_blank" class="footer__icon"><i
+                    class="bx bxl-instagram"></i></a>
+            <a href="https://twitter.com/Ardinur03" target="_blank" class="footer__icon"><i
+                    class="bx bxl-twitter"></i></a>
         </div>
-    </section>
+
+        <p class="mt-2">
+            &copy; Copyright
+
+            <script>
+                document.write(new Date().getFullYear());
+            </script> Designed by |
+            <a href="#" class="text-white">
+                Kelompok 7</a>
+        </p>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
