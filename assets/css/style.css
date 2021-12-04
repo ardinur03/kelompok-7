@@ -497,6 +497,9 @@ nav ul li a {
         padding-top: 40px;
         height: auto;
     }
+    .about-section {
+        height: auto;
+    }
 }
 
 
