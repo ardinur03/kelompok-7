@@ -14,7 +14,7 @@ menuToggle.addEventListener("click", () => {
 
 // create event listener if scroll is 250 add class to nav element
 window.addEventListener("scroll", (e) => {
-    console.log(scroll);
+    let scroll = this.scrollY;
     if (!scroll || scroll < 0) {
         // add class active link to nav link
         linkBeranda.className = "active";
