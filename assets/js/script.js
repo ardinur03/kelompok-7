@@ -3,8 +3,10 @@ const navUl = document.querySelector("nav ul");
 const nav = document.querySelector("nav");
 const logo = document.querySelector(".logo img");
 const linkBeranda = document.querySelector(".beranda");
-const linkTentang = document.querySelector(".kelompok");
+const linkTentang = document.querySelector(".tentang");
+const linkKelompok = document.querySelector(".kelompok");
 const linkKontak = document.querySelector(".kontak");
+const links = document.querySelectorAll(".link");
 
 menuToggle.addEventListener("click", () => {
     navUl.classList.toggle("slide");
@@ -12,7 +14,7 @@ menuToggle.addEventListener("click", () => {
 
 // create event listener if scroll is 250 add class to nav element
 window.addEventListener("scroll", (e) => {
-    let scroll = this.scrollY;
+    console.log(scroll);
     if (!scroll || scroll < 0) {
         // add class active link to nav link
         linkBeranda.className = "active";
@@ -24,7 +26,8 @@ window.addEventListener("scroll", (e) => {
             nav.className = "nav-bg-primary";
 
             // navlink tentang
-            if (scroll < 6790) {
+
+            if (scroll >= 680 && scroll <= 1393) {
                 // add class active link to nav link
                 linkTentang.className = "active";
             } else {
@@ -32,7 +35,15 @@ window.addEventListener("scroll", (e) => {
                 linkTentang.className = "";
             }
 
-            if (scroll > 6790) {
+            if (scroll > 1460 && scroll <= 7830) {
+                // add class active link to nav link
+                linkKelompok.className = "active";
+            } else {
+                // remove class active link to nav link
+                linkKelompok.className = "";
+            }
+
+            if (scroll > 8470) {
                 // add class active link to nav link
                 linkKontak.className = "active";
             } else {
