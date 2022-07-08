@@ -1,5 +1,6 @@
 # Website Flora & Fauna
 ### kelompok-7 | 1A D3 Teknik Informatika
+### Demo website : [Click Me](https://ardinur03.github.io/kelompok-7)
 
 # Technology
 1. HTML
